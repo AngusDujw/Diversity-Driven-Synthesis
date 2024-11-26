@@ -21,13 +21,7 @@ To get started, follow these instructions to set up the environment and install 
     ```
 
 2. **Install required packages**:
-   You don’t need to create a new environment; simply ensure that you have the packages listed in requirements.txt.
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-> **Note**: Ensure you have the correct versions of CUDA, PyTorch, and other dependencies as listed in the `requirements.txt`.
-
+   You don’t need to create a new environment; simply ensure that you have compatible versions of CUDA and PyTorch installed.
 ---
 
 ## 🚀 Usage
