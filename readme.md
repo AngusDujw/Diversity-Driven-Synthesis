@@ -1,4 +1,5 @@
-# 🌟 Diversity-Driven Synthesis: Enhancing Dataset Distillation through Directed Weight Adjustment (<span style="color:orange">NeurIPS 2024 Spotlight</span>)
+# 🌟 Diversity-Driven Synthesis: Enhancing Dataset Distillation through Directed Weight Adjustment 
+# (<span style="color:orange">NeurIPS 2024 Spotlight</span>)
 
 >[Diversity-Driven Synthesis: Enhancing Dataset Distillation through Directed Weight Adjustment](https://arxiv.org/abs/2409.17612).<br>
 > [Jiawei Du](https://scholar.google.com/citations?user=WrJKEzEAAAAJ&hl=zh-CN), [Xin Zhang](https://zhangxin-xd.github.io/), [Juncheng Hu](https://scholar.google.com/citations?user=F8_T6XMAAAAJ&hl=en&oi=sra), [Wenxin Huang](https://scholar.google.com/citations?user=TY2PC4CgIwkC&hl=en), [Joey Tianyi Zhou](https://joeyzhouty.github.io/) <br>
