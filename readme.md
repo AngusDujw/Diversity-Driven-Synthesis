@@ -80,6 +80,18 @@ For ImageNet-1K, we utilize the pre-trained weights available in torchvision. As
           --output-dir ./syn_data/validation-c100-ipc50 
           --networks resnet18 --dataset cifar100 
     ```
+    Tiny-ImageNet:
+    ```bash
+    python validation/validation_tiny.py 
+            --epochs 200 --batch-size 64 --ipc 50 
+            --lr 0.2 --momentum 0.9 --weight-decay 1e-4 
+            --lr-scheduler cosineannealinglr 
+            --lr-warmup-epochs 5 
+            --lr-warmup-method linear 
+            --lr-warmup-decay 0.01 
+            --syn-data-path ./syn_data/distillation-tiny-ipc50/ 
+            --model resnet18   
+    ```
     ImageNet-1K:
     ```bash
     python validation/validation_imgnet.py 
