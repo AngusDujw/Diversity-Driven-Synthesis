@@ -124,7 +124,7 @@ def evaluate(model, criterion, data_loader, device, epoch, print_freq=100, log_s
     print(f"{header} Acc@1 {metric_logger.acc1.global_avg:.3f} Acc@5 {metric_logger.acc5.global_avg:.3f}")
     return metric_logger.acc1.global_avg
 
-def load_data(traindir, valdir, args):
+def load_data(args):
     # Data loading code
     normalize = transforms.Normalize(mean=[0.4802, 0.4481, 0.3975],
                                      std=[0.2302, 0.2265, 0.2262])
@@ -147,7 +147,7 @@ def load_data(traindir, valdir, args):
         transforms.ToTensor(),
         normalize,
     ])
-    dataset_test = TinyImageNet('/data/zhangxin/DWA_NeurIPS/tiny-imagenet-200', split='val', download=True, transform=val_transform)
+    dataset_test = TinyImageNet(args.data_path, split='val', download=True, transform=val_transform)
 
 
     print("Creating data loaders")
@@ -181,9 +181,7 @@ def main(args):
     else:
         torch.backends.cudnn.benchmark = True
 
-    train_dir = os.path.join(args.data_path, "train")
-    val_dir = os.path.join(args.data_path, "val")
-    dataset, dataset_test, train_sampler, test_sampler = load_data(train_dir, val_dir, args)
+    dataset, dataset_test, train_sampler, test_sampler = load_data(args)
 
     collate_fn = None
     num_classes = 200
@@ -390,7 +388,7 @@ def main(args):
 def get_args():
     parser = argparse.ArgumentParser(description="Validation Tiny ImageNet")
 
-    parser.add_argument("--data-path", default="./data/tiny-imagenet-200", type=str, help="dataset path")
+    parser.add_argument("--data-path", default="'/data/zhangxin/DWA_NeurIPS/tiny-imagenet-200'", type=str, help="dataset path")
     parser.add_argument("--model", default="resnet18", type=str, help="model name")
     parser.add_argument("--device", default="cuda", type=str, help="device (Use cuda or cpu Default: cuda)")
     parser.add_argument("-b", "--batch-size", default=32, type=int, help="images per gpu, the total batch size is $NGPU x batch_size")
