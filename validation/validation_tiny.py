@@ -138,7 +138,7 @@ def load_data(traindir, valdir, args):
 
     dataset = ImageFolderIPC(
         args.syn_data_path, 
-        image_number = args.image_per_class, 
+        image_number = args.ipc, 
         transform = train_transform
     )
 
@@ -445,7 +445,7 @@ def get_args():
     parser.add_argument("--teacher-path", default='./pretrain/save/tiny/resnet18_E100/ckpt.pth', type=str, help="teacher model checkpoint path")
     parser.add_argument("-T", "--temperature", default=1.0, type=float, help="temperature for distillation loss")
     parser.add_argument("--syn-data-path", default=None, type=str, help="synthetic data path")
-    parser.add_argument("--image-per-class", default=50, type=int, help="number of synthetic images")
+    parser.add_argument("--ipc", default=50, type=int, help="number of synthetic images")
 
     parser.add_argument('--wandb-project', type=str, default='validation-tiny-ipc50', 
                         help='wandb project name')
