@@ -88,7 +88,8 @@ For ImageNet-1K, we utilize the pre-trained weights available in torchvision. As
             --lr-scheduler cosineannealinglr 
             --lr-warmup-epochs 5 
             --lr-warmup-method linear 
-            --lr-warmup-decay 0.01 
+            --lr-warmup-decay 0.01
+            --data-path ./data/tiny/
             --syn-data-path ./syn_data/distillation-tiny-ipc50/ 
             --model resnet18   
     ```
