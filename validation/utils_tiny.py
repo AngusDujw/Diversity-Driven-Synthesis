@@ -11,6 +11,7 @@ from torchvision.datasets import VisionDataset
 from torchvision.datasets.folder import default_loader
 from torchvision.datasets.utils import calculate_md5, extract_archive, check_integrity, download_url, verify_str_arg
 from typing import List, Optional, Tuple
+from collections import defaultdict, deque, OrderedDict
 import wandb
 from datetime import datetime
 
