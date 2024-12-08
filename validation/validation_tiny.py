@@ -441,7 +441,7 @@ def get_args():
     # Knowledge distillation parameters
     parser.add_argument("--teacher-model", default='resnet18', type=str, help="teacher model name")
     parser.add_argument("--teacher-path", default='./pretrain/save/tiny/resnet18_E100/ckpt.pth', type=str, help="teacher model checkpoint path")
-    parser.add_argument("-T", "--temperature", default=1.0, type=float, help="temperature for distillation loss")
+    parser.add_argument("-T", "--temperature", default=20.0, type=float, help="temperature for distillation loss")
     parser.add_argument("--syn-data-path", default=None, type=str, help="synthetic data path")
     parser.add_argument("--ipc", default=50, type=int, help="number of synthetic images")
 
