@@ -10,10 +10,11 @@ from torchvision.transforms import functional as F
 from torchvision.datasets import VisionDataset
 from torchvision.datasets.folder import default_loader
 from torchvision.datasets.utils import calculate_md5, extract_archive, check_integrity, download_url, verify_str_arg
-import time
-import datetime
 from typing import List, Optional, Tuple
 from collections import defaultdict, deque, OrderedDict
+import time
+import datetime
+
 
 
 class RASampler(torch.utils.data.Sampler):
@@ -563,6 +564,13 @@ def init_distributed_mode(args):
     torch.distributed.barrier()
     setup_for_distributed(args.rank == 0)
 
+def is_dist_avail_and_initialized():
+    if not dist.is_available():
+        return False
+    if not dist.is_initialized():
+        return False
+    return True
+    
 def set_weight_decay(
     model: torch.nn.Module,
     weight_decay: float,
