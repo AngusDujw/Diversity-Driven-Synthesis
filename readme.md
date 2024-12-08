@@ -29,7 +29,7 @@ To get started, follow these instructions to set up the environment and install 
 
 Here’s how to use this code for distillation and evaluation:
 - **Preparation**
-For ImageNet-1K, we utilize the pre-trained weights available in torchvision. As for CIFAR datasets, we offer the trained weights on this [link](https://drive.google.com/drive/folders/1dH96COYa4kCquQ4c6wEnt7QobGMl6M3N?usp=sharing). Alternatively, you can generate the pre-trained weights yourself using the following code.
+For ImageNet-1K, we utilize the pre-trained weights available in torchvision. As for CIFAR and Tiny-ImageNet datasets, we offer the trained weights on this [link](https://drive.google.com/drive/folders/1dH96COYa4kCquQ4c6wEnt7QobGMl6M3N?usp=sharing). Alternatively, you can generate the pre-trained weights yourself using the following code.
     ```bash
     bash squeeze.sh
     ```
