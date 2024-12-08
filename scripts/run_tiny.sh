@@ -16,6 +16,7 @@ python validation/validation_tiny.py \
     --lr-warmup-epochs 5 \
     --lr-warmup-method linear \
     --lr-warmup-decay 0.01 \
+    --data-path ./data/tiny/ \
     --syn-data-path ./syn_data/distillation-tiny-ipc50/ \
     --model resnet18   
 
