@@ -47,6 +47,17 @@ For ImageNet-1K, we utilize the pre-trained weights available in torchvision. As
         --steps 12 --rho 15e-3 --ipc-start 0 --ipc-end 50 --r-var 11 
         --dataset cifar100 
     ```
+    Tiny-ImageNet:
+    ```bash
+    python distillation/distillation_tiny.py \
+         --iteration 2000 --r-bn 0.01 --batch-size 200 --lr 0.1 \
+         --exp-name distillation-tiny-ipc50 \
+         --store-best-images \
+         --syn-data-path ./syn_data/ \
+         --init-path ./distillation/init_images/tiny \
+         --steps 12 --rho 15e-3 --ipc-start 0 --ipc-end 50 --r-var 11 \
+         --dataset tiny 
+    ```
     ImageNet-1K:
     ```bash
     python distillation/distillation_imgnet.py 
